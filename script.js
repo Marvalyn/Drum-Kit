@@ -1,11 +1,10 @@
 function playSound(e) {
     //selecting audio elements using the data-key attribute
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    console.log(audio);
 
     // selecting element with class of key and the element with data-key attribute
     const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
-    console.log(key)
+ 
     //if there is no audio element, stop the function from running
     if (!audio)
         return;
@@ -22,6 +21,7 @@ function removeTransition(e) {
         return;  //if property name is not 'transform' end function
     this.classList.remove("playing");
 }
+
 const keys = document.querySelectorAll('.key');
 
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
