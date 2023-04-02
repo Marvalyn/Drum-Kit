@@ -13,5 +13,15 @@ return;
 audio.currentTime=0;
 audio.play();
 
+// adds class 'playing' when key down event happens'
 key.classList.add("playing");
 });
+
+function removeTransition(e) {
+if (e.propertyName !== "transform")
+return;  //if property name is not 'transform' end function
+this.classList.remove("playing");
+}
+const keys = document.querySelectorAll('.key');
+
+keys.forEach(key => key.addEventListener("transitionend", removeTransition));
