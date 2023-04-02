@@ -1,7 +1,7 @@
 # Drum-Kit
 
 ## Description
-This app is a fun game built using HTML, CSS and JavaScript. Using your keyboard, press any of the keys shown on screen and a sound will play, simulating a full drum kit.
+This app is a fun game built using HTML, CSS and JavaScript, from the Wes Bos #JavaScript30 challenge starter code. Using your keyboard, press any of the keys shown on screen and a sound will play, simulating a full drum kit.
 
 ## Installation
 
