@@ -16,14 +16,17 @@ function playSound(e) {
     key.classList.add("playing");
 };
 
+// calling this function will stop the css transition attributes 
 function removeTransition(e) {
     if (e.propertyName !== "transform")
         return;  //if property name is not 'transform' end function
     this.classList.remove("playing");
 }
 
+// selects all elements with a class of key and adds them into an array
 const keys = document.querySelectorAll('.key');
-
+// for each element of the array add an eventlistener for transition end and call the removeTransition function
 keys.forEach(key => key.addEventListener("transitionend", removeTransition));
 
+// add event listener for keydown events, and run the playSound function when event happens
 window.addEventListener('keydown', playSound)
