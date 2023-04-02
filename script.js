@@ -5,4 +5,6 @@ console.log(audio);
 //if there is no audio element, stop the function from running
 if(!audio)
 return;
+
+audio.play();
 });
